@@ -42,7 +42,6 @@ def main():
     lon = []
     
     for row in address:
-        print(row)
         url = 'http://api.vworld.kr/req/address?'
         params = 'service=address&request=getcoord&version=2.0&crs=epsg:4326&refine=false&simple=false&format=json&type='
         road_type = 'road'
@@ -68,7 +67,6 @@ def main():
     if select_grid['selected_rows'] :
         a =  list(map(lambda u: u["주소"], select_grid['selected_rows']))
         data = data[data['주소'] != '세종특별자치시 남세종로 440']
-        print(data)
         map_insert(data)
     else :  
         map_insert(data)
