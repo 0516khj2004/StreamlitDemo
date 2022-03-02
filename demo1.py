@@ -48,7 +48,7 @@ def main():
         road_type = 'road'
         address = '&address='
         keys = '&key='
-        primary_key = 'FC4A216A-3C0E-3487-B357-AD21CC0E7050'
+        primary_key = st.secrets["primary_key"]
 
         r = requests.get(url+params+road_type+address+row+keys+primary_key)
         
